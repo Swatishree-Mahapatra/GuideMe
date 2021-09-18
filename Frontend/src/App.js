@@ -5,7 +5,7 @@ import Footer from "./components/Footer/Footer"
 import LoginRegister from "./components/Login/LoginRegister";
 import Course from "./components/Courses/courses";
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-
+import Contact from "./components/Forms/Contact";
 
 
 function App() {
@@ -17,6 +17,9 @@ function App() {
       </Route>
       <Route path="/courses">
       <Course />
+      </Route>
+      <Route path="/contact">
+      <Contact />
       </Route>
       <Route path="/dashboard">
       <MiniDrawer />
