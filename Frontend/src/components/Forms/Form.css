@@ -16,11 +16,7 @@ textarea {
     box-sizing: border-box;
     border: 2px solid #58B19F;
     border-radius: 2px;
-<<<<<<< HEAD
     resize: none;  
-=======
-    resize: both;  
->>>>>>> cc5f17efbae06e3d93c0dba61ef25ff5cb0130c7
 }
 
 input[type=submit] {
