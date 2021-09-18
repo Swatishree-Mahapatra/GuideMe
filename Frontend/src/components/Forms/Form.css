@@ -1,0 +1,37 @@
+Form.css Source Code
+
+input[type=text], input[type=email] , input[type=number] {
+    width: 80%;
+    padding: 5px 22px;
+    margin: 10px 0px;
+    box-sizing: border-box;  
+    border: 2px solid #58B19F;
+
+}
+
+textarea {
+    width: 80%;
+    height: 50px;
+    padding: 15px 22px;
+    box-sizing: border-box;
+    border: 2px solid #58B19F;
+    border-radius: 2px;
+<<<<<<< HEAD
+    resize: none;  
+=======
+    resize: both;  
+>>>>>>> cc5f17efbae06e3d93c0dba61ef25ff5cb0130c7
+}
+
+input[type=submit] {
+    background-color: #7a46b6;
+    border: none;
+    color: white;
+    padding: 8px 36px;
+    text-decoration: none;
+    border: 2px solid #ccc;
+    margin: 5px 4px;
+    cursor: pointer;  
+
+}
+
