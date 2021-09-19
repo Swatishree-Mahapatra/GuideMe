@@ -34,13 +34,3 @@ Nevertheless, we spent hours helping each other and working in a synchronized ma
 
 To make a working model of our project we planned to build a fully functional and easy-to-use UI website using the MERN stack. For the frontend, we used Material UI to build and style our React components. We used Nodejs and Express for our backend and MongoDB as our database because of its document-oriented data model. We also used firebase authentication because we plan to make our login system support authentication using phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more. We used Figma for designing the prototype of our website.
 
-Links:
-
-We used firebase authentication because we plan to make our login system support authentication using phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more.
-choose a course ke bare main thoda bol dena
-We organize all the resources recommended by peers and mentors. 
-When we open the dashboard we get………….. (mention about the options)
-Here, We allow every student to create courses with useful links to videos, websites and books themselves so that they can also help the student community.
-With the ongoing pandemic, physical classes are not possible so students are not able to have an interactive discussion. Hence, we address this problem by building an integrated discussion forum at our platform, GuideMe. 
-
-Your direction is more imp than your speed
