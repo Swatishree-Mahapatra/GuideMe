@@ -5,6 +5,10 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { CardActionArea } from "@mui/material";
+import StarsRoundedIcon from "@mui/icons-material/StarsRounded";
+import IconButton from "@mui/material/IconButton";
+
 
 export default function ImgMediaCard(props) {
 
@@ -20,6 +24,7 @@ export default function ImgMediaCard(props) {
 
   return (
     <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
       <CardMedia
         component="img"
         alt="green iguana"
@@ -34,13 +39,17 @@ export default function ImgMediaCard(props) {
           {props.author}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {props.body}
+          {props.body.substring(0, 150)}
         </Typography>
       </CardContent>
+      </CardActionArea>
       <CardActions>
-        <Button size="small" onClick={handleLike}>Likes</Button>
-        <p>{likecounter}</p>
+      <IconButton aria-label="add to favorites" onClick={handleLike}>
+          <StarsRoundedIcon />
+          {likecounter}
+        </IconButton>
         <Button size="small">Read More</Button>
+
       </CardActions>
     </Card>
   );

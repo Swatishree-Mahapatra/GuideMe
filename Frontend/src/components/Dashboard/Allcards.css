@@ -1,0 +1,14 @@
+body {
+  background: linear-gradient(315deg, #f8f9d2 0%, #d0edfd 74%);
+}
+
+.card {
+    display: grid;
+    margin-top: 50px;
+    margin: 50px;
+    background: linear-gradient(315deg, #f8f9d2 0%, #d0edfd 74%);
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 70px;
+    grid-row-gap: 50px;
+    
+  }

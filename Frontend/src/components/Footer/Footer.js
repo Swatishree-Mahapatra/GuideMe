@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "green", 
+      <h1 style={{ color: "white", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
         GuideME: A ultimate guide for all students.
@@ -20,12 +20,12 @@ const Footer = () => {
         <Row>
           <Column>
             <Heading>About Us</Heading>
-            <FooterLink href="#">Aim</FooterLink>
-            <FooterLink href="#">Vision</FooterLink>
+            <FooterLink href="#">Dream</FooterLink>
+            <FooterLink href="#">Insights</FooterLink>
             <FooterLink href="#">Testimonials</FooterLink>
           </Column>
           <Column>
-            <Heading>Services</Heading>
+            <Heading>Courses</Heading>
             <FooterLink href="#">JEE</FooterLink>
             <FooterLink href="#">NEET</FooterLink>
             <FooterLink href="#">NTSE</FooterLink>
@@ -33,10 +33,10 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">Uttar Pradesh</FooterLink>
-            <FooterLink href="#">Ahemdabad</FooterLink>
-            <FooterLink href="#">Indore</FooterLink>
-            <FooterLink href="#">Mumbai</FooterLink>
+            <FooterLink href="#">Abhas</FooterLink>
+            <FooterLink href="#">Aashish</FooterLink>
+            <FooterLink href="#">Swati</FooterLink>
+            <FooterLink href="#">Ojasvi</FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>

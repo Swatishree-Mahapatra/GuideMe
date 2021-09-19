@@ -29,7 +29,7 @@ export default function Form() {
 
  
     return (
-      <div>
+      <div className ="Form">
         <form  onSubmit={handleSubmit}>
           <label> Title </label>
           <input type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} /> <br />

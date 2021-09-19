@@ -2,8 +2,11 @@
     box-sizing: border-box;
   }
   
-  body {
-    background:rgb(84, 188,161);
+ .Login {
+    /* background-color: #f8f9d2; */
+    background: linear-gradient(315deg, #f8f9d2 0%, #d0edfd 74%);
+
+    /* background:rgb(84, 188,161); */
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,7 +1,7 @@
 import { useState,useEffect } from "react";
 import ImgMediaCard from "../Card/Cards";
 import Grid from "@mui/material/Grid";
-import "./Allcard.css";
+import "./Allcards.css";
 
 export default function Allcard() {
 
@@ -20,12 +20,12 @@ export default function Allcard() {
   course && console.log(course)
 
     return(
-      <div className="card">
+      <div className="card" >
           
 
           {course &&
         course.map((article) => (
-          <Grid item xs={3}>
+          <Grid item xs={19}>
             <ImgMediaCard
               title={article.title}
               likes={article.likes}
@@ -38,90 +38,7 @@ export default function Allcard() {
             />
              </Grid>
         ))}
-          {/* <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Algebra"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Conic Section"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Integration"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Integration"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Integration"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Integration"/>
-          </Grid>
-
-          <Grid item xs={3}>
-            <ImgMediaCard title="Integration"/>
-          </Grid>
-
-          <Grid item xs={3}>
-            <ImgMediaCard title="Integration"/>
-          </Grid>
-
-          <Grid item xs={3}>
-            <ImgMediaCard title="Integration"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Algebra"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Conic Section"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Integration"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Algebra"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Conic Section"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Integration"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Calculus"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard title="Algebra"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Conic Section"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Integration"/>
-          </Grid>
-          <Grid item xs={3}>
-            <ImgMediaCard  title="Integration"/>
-          </Grid> */}
+       
           
        
           
