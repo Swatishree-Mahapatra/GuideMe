@@ -2,7 +2,8 @@ import styled from 'styled-components';
    
 export const Box = styled.div`
   padding: 80px 60px;
-  background: black;
+  background: linear-gradient(to right, #085078, #85d8ce);
+  // background: #4a3b70;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -49,7 +50,7 @@ export const FooterLink = styled.a`
   text-decoration: none;
    
   &:hover {
-      color: green;
+      color: red;
       transition: 200ms ease-in;
   }
 `;

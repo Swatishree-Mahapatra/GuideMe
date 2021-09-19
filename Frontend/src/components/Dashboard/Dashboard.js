@@ -17,10 +17,15 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { Avatar } from "@mui/material";
 import Allcard from "./Allcard";
-import "./Dashboard.css";
+import  Button  from "@mui/material/Button";
+import { useHistory } from "react-router";
 // import Footer from "../Footer/Footer";
+import "./Dashboard.css";
+
+import { useAuth } from "../firebase/AuthContext";
+import UserCircle from "./Avatar";
+import { Logout } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -89,6 +94,7 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
+
 export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -100,6 +106,20 @@ export default function MiniDrawer() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const history = useHistory()
+
+  //firebase 
+  const { currentUser, logout } = useAuth()
+  async function handleLogout() {
+     try {
+      await logout()
+      history.push("/")
+    } catch {
+      console.log("fail to logout")
+    }
+  }
+
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -118,12 +138,15 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-          <Avatar >N</Avatar>   
+         
           <Typography variant="h6" noWrap component="div">
-            GuideMe
+            GuideMe  
           </Typography>
-            
+           <UserCircle />    
         </Toolbar>
+        <Button  className="LogoutBtn" variant="contained"color="inherit"  onClick={handleLogout}>
+            Log Out
+          </Button>
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
@@ -161,7 +184,9 @@ export default function MiniDrawer() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
       </Box>
+      <Typography paragraph>
       <Allcard/>
+      </Typography>
     </Box>
   );
 }

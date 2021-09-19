@@ -1,29 +1,64 @@
-import "./courses.css"
 import React, { useState } from "react";
+import "./courses.css";
 import {Link} from 'react-router-dom';
 
-const Course = () => {
-    return ( <>
-      <section className="basic-grid">
-     
-      <div className="card card-tall card-wide"><h2 className="text text1">TELL US MORE ABOUT YOURSLEF</h2></div>
-      <div className="card card-tall card-wide">
-        <ul className="text">
-          <li>JEE</li>
-          <li>NEET</li>
-          <li>KVPY</li>
-          <li>NTSE</li>
-          <li>UPSC</li>
-        </ul>
+const LoginRegister = () => {
+  const [addclass, setaddclass] = useState("");
+  return (
+    <div className={`container ${addclass}`} id="container">
+      <div className="form-container  sign-up-container">
+        <form>
+          <h1>Choose Courses</h1>
+          <ul>
+            <li>GATE</li>
+            <li>CAT</li>
+            <li>CLAT</li>
+            <li>MBA</li>
+          </ul>
+          <button type="submit"><Link to='/dashboard'>LET'S BEGIN</Link> </button>
+        </form>
       </div>
-      
-  </section>
-  
+      <div className="form-container sign-in-container">
+        <form>
+          <h1>CHOOSE COURSES</h1>
+          <ul>
+            <li>JEE</li>
+            <li>NEET</li>
+            <li>KVPY</li>
+            <li>NTSE</li>
+          </ul>
+          
+          <button type="submit"><Link to='/dashboard'>LET'S BEGIN</Link> </button>
+        </form>
+      </div>
+      <div className="overlay-container">
+        <div className="overlay">
+          <div className="overlay-panel overlay-left">
+            <h2>Welcome Back!!</h2>
+            <p>Undergraduate Aspirant ??</p>
+            <button
+              className="check"
+              id="signIn"
+              onClick={() => setaddclass("")}
+            >
+              CHECK ME OUT
+            </button>
+          </div>
+          <div className="overlay-panel overlay-right">
+            <h2>Hello Friends!!</h2>
+            <p>Preparing for Postgraduate Entrances ??</p>
+            <button
+              className="check"
+              id="signUp"
+              onClick={() => setaddclass("right-panel-active")}
+            >
+              FOLLOW ME
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-  </>
-      
-
-     );
-}
- 
-export default Course;
+export default LoginRegister;
