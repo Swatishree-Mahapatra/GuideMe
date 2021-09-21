@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import LoginRegister from "./pages/Login/LoginRegister";
 import Course from "./components/Courses/courses";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -19,34 +18,21 @@ function App() {
       <Router>
         <AuthProvider>
           <Switch>
-            <Route exact path="/">
-              <LoginRegister />
-            </Route>
+            <Route exact path="/" component={LoginRegister} />
 
-            <Route exact path = "/playground">
-              <CoursesNew/>
-            </Route>  
+            <Route path="/courses" component={Course} />
 
-            <Route path="/courses">
-            <Course/>
-            </Route>
+            <PrivateRoute
+              path="/dashboard"
+              component={(DashboardNew, Allcard, FooterNew)}
+            />
 
-            <PrivateRoute path="/dashboard">
-              <DashboardNew />
-              <Allcard />
-              <FooterNew/>
-            </PrivateRoute>
+            <PrivateRoute path="/chat" component={(DashboardNew, Discussion)} />
 
-            <PrivateRoute path="/chat">
-              <DashboardNew />
-              <Discussion />
-            </PrivateRoute>
-
-            <PrivateRoute path="/add">
-              <DashboardNew />
-              <Contact />
-              <FooterNew/>
-            </PrivateRoute>
+            <PrivateRoute
+              path="/add"
+              component={(DashboardNew, Contact, FooterNew)}
+            />
           </Switch>
         </AuthProvider>
       </Router>
