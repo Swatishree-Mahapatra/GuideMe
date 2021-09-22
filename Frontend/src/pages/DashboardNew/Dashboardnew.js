@@ -4,13 +4,11 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { useHistory } from 'react-router';
 import DropDown from './DropDown';
 
 
-import { useAuth } from "../firebase/AuthContext";
+import { useAuth } from "../../firebase/AuthContext";
 
 
 export default function DashboardNew() {
@@ -23,6 +21,7 @@ const { currentUser, logout } = useAuth()
 async function handleLogout() {
    try {
     await logout()
+    console.log("LOGOUT");
     history.push("/")
   } catch {
     console.log("fail to logout")

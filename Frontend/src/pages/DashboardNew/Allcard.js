@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-import ImgMediaCard from "../Card/Cards";
+import ImgMediaCard from "../../components/Card/Cards";
 import Grid from "@mui/material/Grid";
 import "./Allcards.css";
 
