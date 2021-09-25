@@ -1,6 +1,6 @@
 # Project Name: GuideMe
 
-# Tagline: 
+Tagline: 
 GuideMe acts as a compass in your preparation journey.
 
 # Technologies we used:
